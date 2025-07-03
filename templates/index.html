@@ -6,15 +6,28 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur mon site de présentation</h1>
-    </header>
-    <section>
-        <h2>À propos de moi</h2>
-        <p>Voici un court paragraphe sur moi ou mon projet.</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 - Mon Site</p>
-    </footer>
+    <div class="page-container">
+        <header>
+    <h1>Bienvenue sur mon site de présentation</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Accueil</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('projet') }}">Projet</a></li>
+        </ul>
+    </nav>
+</header>
+
+        <main>
+            <section>
+                <h2>À propos de moi</h2>
+                <p>Voici un court paragraphe sur moi ou mon projet.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 - Mon Site</p>
+        </footer>
+    </div>
 </body>
 </html>

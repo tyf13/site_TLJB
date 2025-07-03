@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1>Mes projets</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Accueil</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('projet') }}">Projet</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Projets réalisés</h2>
+                <p>Voici une liste de mes projets ou réalisations professionnelles / personnelles.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 - Mon Site</p>
+        </footer>
+    </div>
+</body>
+</html>
