@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Marketing-digital</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header>
+        <h1>Offre Marketing</h1>
+    </header>
+
+    <div class="page-container">
+
+        <div class="nav-wrapper">
+            <nav class="menu">
+                <a href="{{ url_for('home') }}">Accueil</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('projet') }}">Projet</a>
+            </nav>
+        </div>
+
+        <main>
+            <section>
+                <h2>Services de marketing digital</h2>
+                <p>
+                  En se basant sur les pratiques du marché et les besoins identifiés dans le Baromètre <br>
+                  Corse numérique : <br>
+                  Création de site web : entre 1 500€ et 5 000€ selon la complexité <br>
+                  Référencement et visibilité en ligne : entre 300€ et 1 000€ par mois <br>
+                  Gestion des réseaux sociaux : entre 300€ et 800€ par mois <br>
+                  Stratégie digitale globale : entre 2 000€ et 8 000€ selon l'ampleur <br>
+                </p>
+            </section>
+        </main>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - Mon Site</p>
+    </footer>
+
+</body>
+</html>
