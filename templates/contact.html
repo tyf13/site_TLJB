@@ -30,7 +30,36 @@
         <main>
             <section>
                 <h2>Me contacter</h2>
-                <p>Vous pouvez me joindre à l'adresse suivante : contact@monsite.com</p>
+
+                <!-- Affichage des messages flash -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                    {% for category, message in messages %}
+                      <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                  {% endif %}
+                {% endwith %}
+
+                <!-- Formulaire HTML classique -->
+                <form method="POST" action="{{ url_for('contact') }}" class="contact-form">
+
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="objet">Objet de la demande :</label>
+                    <input type="text" id="objet" name="objet" required>
+
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Envoyer</button>
+                </form>
             </section>
         </main>
 
@@ -39,7 +68,6 @@
     <footer>
         <p>&copy; 2025 - Mon Site</p>
     </footer>
-
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
